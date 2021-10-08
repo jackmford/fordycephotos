@@ -18,7 +18,7 @@ def hello():
         img_name = contents['Contents'][i]['Key']
         if img_name not in img_files:
             client.download_file(BUCKET_NAME, img_name, f'static/img/{img_name}')
-    return render_template('index.html')
+    return render_template('index.html', images=img_files)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
