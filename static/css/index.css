@@ -12,3 +12,8 @@ body {
   padding-top: 50px;
   padding-bottom: 50px;
 }
+
+#header {
+  text-align: center;
+  font-family: Didot;
+}
