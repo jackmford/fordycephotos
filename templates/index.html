@@ -11,9 +11,14 @@
     <div>
       <h5 id=header> jack fordyce </h5>
     </div>
-    <div>
+    <div id="film active">
       {% for image in images %}
-        <img src="../static/img/{{ image }}"/>
+        <img src="../static/img/iphone/{{ image }}"/>
+      {% endfor %}
+    </div>
+    <div id="iphone">
+      {% for image in images %}
+        <img src="../static/img/iphone/{{ image }}"/>
       {% endfor %}
     </div>
   </body>
