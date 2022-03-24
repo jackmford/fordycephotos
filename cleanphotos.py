@@ -17,11 +17,11 @@ def hello():
     film_img_files = os.listdir('static/img/film')
     for i in range(len(contents['Contents'])):
         img_name = contents['Contents'][i]['Key']
-        if img_name not in img_files and 'film' in img_name:
+        if img_name not in film_img_files and 'film' in img_name:
             client.download_file(BUCKET_NAME, img_name, f'static/img/film/{img_name}')
-        elif img_name not in img_files:
+        elif img_name not in iphone_img_files:
             client.download_file(BUCKET_NAME, img_name, f'static/img/iphone/{img_name}')
-    return render_template('index.html', images=img_files)
+    return render_template('index.html', iphone_images=iphone_img_files, film_images=film_img_files)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
