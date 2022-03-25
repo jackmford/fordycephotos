@@ -1,3 +1,16 @@
+button {
+  background-color: white;
+  border: 2px solid #000000;
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-family: Didot;
+  margin: 5px 5px 5px;
+}
+
+button:hover {
+  background-color: #FFFAF0;
+}
+
 img {
   width: 700px;
   height: 500px;
@@ -13,11 +26,13 @@ body {
   padding-bottom: 50px;
 }
 
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #header {
   text-align: center;
   font-family: Didot;
-}
-
-#iphone {
-  display: none;
 }
