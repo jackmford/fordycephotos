@@ -18,12 +18,12 @@
     </span>
     <div class="tabcontent" id="film">
       {% for image in film_images %}
-        <img src="../static/img/film/{{ image }}"/>
+        <img src="../{{ image }}"/>
       {% endfor %}
     </div>
     <div class="tabcontent" id="iphone">
       {% for image in iphone_images %}
-        <img src="../static/img/iphone/{{ image }}"/>
+        <img src="../{{ image }}"/>
       {% endfor %}
     </div>
     <script src="../static/index.js"></script>

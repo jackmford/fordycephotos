@@ -13,4 +13,5 @@ function changeTab(film_type, btn_name) {
   document.getElementById(btn_name).className = "active";
 }
 
+document.getElementById('film_button').className = "active";
 document.getElementById('iphone').style.display = "none";

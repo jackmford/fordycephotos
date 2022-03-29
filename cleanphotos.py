@@ -1,13 +1,17 @@
 from flask import Flask
 app = Flask(__name__)
 
+import glob
 import os
 from flask import render_template
 
 @app.route("/")
 def hello():
-    film_img_files = os.listdir('static/img/film')
-    iphone_img_files = os.listdir('static/img/iphone')
+    film_img_files = glob.glob('static/img/film/*')
+    film_img_files.sort(key=os.path.getmtime)
+
+    iphone_img_files = glob.glob('static/img/iphone/*')
+    iphone_img_files.sort(key=os.path.getmtime)
     return render_template('index.html', iphone_images=iphone_img_files, film_images=film_img_files)
 
 if __name__ == "__main__":
