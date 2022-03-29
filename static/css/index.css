@@ -1,13 +1,17 @@
 button {
   background-color: white;
-  border: 2px solid #000000;
-  border-radius: 12px;
+  border: 1px solid #000000;
+  border-radius: 6px;
   padding: 10px 20px;
   font-family: Didot;
   margin: 5px 5px 5px;
 }
 
 button:hover {
+  background-color: #FFFAF0;
+}
+
+.active {
   background-color: #FFFAF0;
 }
 

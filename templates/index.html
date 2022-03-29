@@ -12,8 +12,8 @@
       <h5 id=header> jack fordyce </h5>
     </div>
     <span class="center">
-      <button onclick="changeTab('film')" type="button">Film</button>
-      <button onclick="changeTab('iphone')" type="button">iPhone</button>
+      <button onclick="changeTab('film', 'film_button')" type="button" id="film_button">Film</button>
+      <button onclick="changeTab('iphone', 'iphone_button')" type="button" id="iphone_button">iPhone</button>
     </span>
     <div class="tabcontent" id="film">
       {% for image in film_images %}
