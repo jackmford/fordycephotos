@@ -1,3 +1,20 @@
+button {
+  background-color: white;
+  border: 1px solid #000000;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-family: Didot;
+  margin: 5px 5px 5px;
+}
+
+button:hover {
+  background-color: #FFFAF0;
+}
+
+.active {
+  background-color: #FFFAF0;
+}
+
 img {
   width: 700px;
   height: 500px;
@@ -11,6 +28,12 @@ img {
 body {
   padding-top: 50px;
   padding-bottom: 50px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #header {

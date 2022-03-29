@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="icon" href="../static/icons/site-icon.png">
-     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
-     <title>Fordyce Photos</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+    <title>Fordyce Photos</title>
   </head>
   <body>
     <div>
@@ -15,6 +15,19 @@
     <div>
       {% for image in images %}
         <img src="../static/img/{{ image }}" class="img-fluid"/>
+    <span class="center">
+      <button onclick="changeTab('film', 'film_button')" type="button" id="film_button">Film</button>
+      <button onclick="changeTab('iphone', 'iphone_button')" type="button" id="iphone_button">iPhone</button>
+    </span>
+    <div class="tabcontent" id="film">
+      {% for image in film_images %}
+        <img src="../static/img/film/{{ image }}"/>
       {% endfor %}
     </div>
+    <div class="tabcontent" id="iphone">
+      {% for image in iphone_images %}
+        <img src="../static/img/iphone/{{ image }}"/>
+      {% endfor %}
+    </div>
+    <script src="../static/index.js"></script>
   </body>
