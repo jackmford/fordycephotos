@@ -1,6 +1,6 @@
 button {
   background-color: white;
-  border: 1px solid #000000;
+  border: #000000;
   border-radius: 6px;
   padding: 10px 20px;
   font-family: Didot;
@@ -9,6 +9,7 @@ button {
 
 button:hover {
   background-color: #FFFAF0;
+  cursor: pointer;
 }
 
 .active {
