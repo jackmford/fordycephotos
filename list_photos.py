@@ -1,11 +1,12 @@
 import boto3
 import os
 
-AWS_KEY=os.environ['AWS_KEY']
-AWS_SECRET=os.environ['AWS_SECRET']
-BUCKET_NAME=os.environ['BUCKET_NAME']
+AWS_KEY = os.environ['AWS_KEY']
+AWS_SECRET = os.environ['AWS_SECRET']
+BUCKET_NAME = os.environ['BUCKET_NAME']
 
-client = boto3.client('s3', aws_access_key_id=AWS_KEY, aws_secret_access_key=AWS_SECRET)
+client = boto3.client('s3', aws_access_key_id=AWS_KEY,
+                      aws_secret_access_key=AWS_SECRET)
 film_contents = client.list_objects(Bucket=BUCKET_NAME, Prefix='film')
 iphone_contents = client.list_objects(Bucket=BUCKET_NAME, Prefix='iphone')
 film_img_files = os.listdir('./static/img/film')
