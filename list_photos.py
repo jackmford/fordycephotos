@@ -15,8 +15,10 @@ iphone_img_files = os.listdir('./app/static/img/iphone')
 for i in range(1, len(film_contents['Contents'])):
     img_name = film_contents['Contents'][i]['Key']
     if img_name not in film_img_files:
-        client.download_file(BUCKET_NAME, img_name, f'./app/static/img/{img_name}')
+        client.download_file(BUCKET_NAME, img_name,
+                             f'./app/static/img/{img_name}')
 for i in range(1, len(iphone_contents['Contents'])):
     img_name = iphone_contents['Contents'][i]['Key']
     if img_name not in iphone_img_files:
-        client.download_file(BUCKET_NAME, img_name, f'./app/static/img/{img_name}')
+        client.download_file(BUCKET_NAME, img_name,
+                             f'./app/static/img/{img_name}')

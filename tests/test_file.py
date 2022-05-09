@@ -1,6 +1,5 @@
-import os
-
 from app import create_app
+
 
 def test_health_endpoint():
     app = create_app()

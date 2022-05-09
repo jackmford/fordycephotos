@@ -1,9 +1,8 @@
-from flask import Flask, Blueprint
+from flask import Blueprint
 from flask import render_template
 import glob
 import os
 
-#app = Flask(__name__)
 bp = Blueprint('cleanphotos', __name__)
 
 
@@ -20,7 +19,3 @@ def hello():
         iphone_img_files[i] = iphone_img_files[i].strip('app/')
     return render_template('index.html', iphone_images=iphone_img_files,
                            film_images=film_img_files)
-
-
-#if __name__ == "__main__":
-    #app.run(host='0.0.0.0')
