@@ -5,3 +5,7 @@ lint:
 
 test:
 	python -m pytest
+
+build:
+	$(MAKE) lint
+	$(MAKE) test
